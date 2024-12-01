@@ -26,7 +26,7 @@ app.get('/tasks', (req, res) => {
   res.send({ tasks });
 });
  
-// Endpoint 3: Sort Tasks by Priority
+// Endpoint 3: Sort Tasks by Priority //[...tasks] alternative to create new copy of Tasks list
 app.get('/tasks/sort-by-priority', (req, res) => {
   const sortedTasks = [...tasks].sort((a, b) => a.priority - b.priority);
   res.send({ tasks: sortedTasks });
